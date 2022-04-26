@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --primary: rgb(225, 225, 225) !important;
+    --secondary: rgb(43, 46, 67) !important;
+    --placeholder: rgb(83, 138, 219) !important;
+}
+
+body {
+    background-color: var(--primary);
+    width: 100%;
+    min-height: 100vh;
+   
+
+}
+
+header,
+footer {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: var(--secondary);
+}
+
+/* Referenced from W3Schools */
+#super {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.three {
+    background-color: var(--placeholder);
+    width: 33.3%;
+    height: 150px;
+
+}
+
+img {
+    border-radius: 100%;
+}
+
+h3 {
+    text-align: center;
+    padding: 60px;
+
+}
+
+.swan {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+}
+
+
+
+button {
+    border-radius: 100%;
+    background: none;
+    border: none;
+}
+
+.box-transparent {
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    background-color: rgba(85, 85, 85, .1);
+    visibility: hidden;
+    padding:50px;
+    text-align: center;
+
+
+}
+.circle{
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    background-color: rgba(85, 85, 85, .2);
+    border-radius: 100%;
+    position: absolute;
+    z-index: 3;
+   
+}
+.y-animation{
+animation: y-axis-animation 5s ease-in-out 0s;
+}
+.z-animation{
+animation: z-axis-animation 5s ease-in-out 0s ;
+
+visibility: visible;
+}
+
+.unclicked{
+    background:none;
+
+}
+
+.clicked{
+    transform: rotatex(180deg);
+}
+svg{
+    padding-top: 30px;
+    padding-left:40px;
+    z-index: 6;
+    font-weight: bold;}
+  
+
+@keyframes z-axis-animation {
+    from {
+        transform: rotateZ(180deg)
+    }
+    100% {
+        border-radius:100%;
+        opacity: 0;
+    
+       
+    
+    }
+ 
+ 
+   
+}
+@keyframes y-axis-animation {
+from {
+    transform: rotatey(720deg)
+}
+
+    
+   
+
+}
+
+
